@@ -5,7 +5,7 @@ ejs social button parts.
 
 ## install
 ```
-bower install --save git://github.com/fnobi/ejs-sns-modules.git
+bower install --save ejs-sns-modules
 ```
 
 ## options
