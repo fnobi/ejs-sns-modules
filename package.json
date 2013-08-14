@@ -1,5 +1,5 @@
 {
-  "name": "ejs-head-modules",
+  "name": "ejs-sns-modules",
   "author": "Fujisawa Shin",
   "devDependencies": {
     "grunt": "~0.4.1",
