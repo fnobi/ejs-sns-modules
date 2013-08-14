@@ -1,0 +1,8 @@
+{
+  "name": "ejs-head-modules",
+  "author": "Fujisawa Shin",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-release": "~0.5.1"
+  }
+}
