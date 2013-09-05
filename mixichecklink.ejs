@@ -1,0 +1,11 @@
+<%
+
+  sns      = sns || {};
+  mixi     = sns.mixi || {};
+  shareurl = mixi.shareurl || url;
+  checkkey = mixi.checkkey || '';
+  linktext = mixi.linktext || 'mixi';
+
+  encoded_shareurl = encodeURIComponent(shareurl);
+
+%><a href="http://mixi.jp/share.pl?u=<%= encoded_shareurl %>&k=<%= checkkey %>" target="_blank"><%= linktext %></a>
