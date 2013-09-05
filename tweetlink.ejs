@@ -1,0 +1,13 @@
+<%
+
+  sns          = sns || {};
+  twitter      = sns.twitter || {};
+  shareurl     = twitter.shareurl || url;
+  sharetext    = twitter.sharetext || name;
+  sharehashtag = twitter.sharehashtag || [];
+  linktext     = twitter.linktext || 'twitter';
+
+  encoded_shareurl = encodeURIComponent(shareurl);
+  sharehashtag_list = sharehashtag.join(',');
+
+%><a target="_blank" href="https://twitter.com/intent/tweet?hashtags=<%= sharehashtag_list %>&original_referer=<%= encoded_shareurl %>&text=<%= sharetext %>&tw_p=tweetbutton&url=<%= encoded_shareurl %>"><%= linktext %></a>
