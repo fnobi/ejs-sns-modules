@@ -3,11 +3,11 @@
   sns          = sns || {};
   twitter      = sns.twitter || {};
   shareurl     = twitter.shareurl || url;
-  sharetext    = twitter.sharetext || name;
+  sharetext    = encodeURI(twitter.sharetext || name);
   sharehashtag = twitter.sharehashtag || [];
   linktext     = twitter.linktext || 'twitter';
 
   encoded_shareurl = encodeURIComponent(shareurl);
   sharehashtag_list = sharehashtag.join(',');
 
-%><a target="_blank" href="https://twitter.com/intent/tweet?hashtags=<%= sharehashtag_list %>&original_referer=<%= encoded_shareurl %>&text=<%= sharetext %>&tw_p=tweetbutton&url=<%= encoded_shareurl %>"><%= linktext %></a>
+%><a target="_blank" href="https://twitter.com/intent/tweet?hashtags=<%= sharehashtag_list %>&amp;original_referer=<%= encoded_shareurl %>&amp;text=<%= sharetext %>&amp;tw_p=tweetbutton&amp;url=<%= encoded_shareurl %>"><%= linktext %></a>

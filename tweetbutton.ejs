@@ -1,8 +1,8 @@
 <%
 
-  sns = sns || {};
-  sns.twitter = sns.twitter || {};
-  sns.twitter.shareurl = sns.twitter.shareurl || url;
+  sns                      = sns || {};
+  sns.twitter              = sns.twitter || {};
+  sns.twitter.shareurl     = sns.twitter.shareurl || url;
   sns.twitter.sharehashtag = sns.twitter.sharehashtag || [];
 
 %><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none"<% if (sns.twitter.shareurl) { %> data-url="<%= sns.twitter.shareurl %>"<% } %><% if (sns.twitter.sharehashtag) { %> data-hashtag="<%= sns.twitter.sharehashtag.join(',') %>"<% } %>>ツイート</a>
