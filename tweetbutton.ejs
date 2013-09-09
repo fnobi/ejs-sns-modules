@@ -3,7 +3,7 @@
   sns          = sns || {};
   twitter      = sns.twitter || {};
   count        = twitter.count === false ? false : true
-  shareurl     = encodeURIComponent(twitter.shareurl || url);
+  shareurl     = twitter.shareurl || url;
   sharehashtag = twitter.sharehashtag || [];
 
 %><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja"<% if (!count) { %> data-count="none"<% } %><% if (shareurl) { %> data-url="<%= shareurl %>"<% } %><% if (sharehashtag) { %> data-hashtag="<%= encodeURI(sharehashtag.join(',')) %>"<% } %>>ツイート</a>
