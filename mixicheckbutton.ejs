@@ -1,0 +1,16 @@
+<%
+
+  sns      = sns || {};
+  mixi     = sns.mixi || {};
+  shareurl = mixi.shareurl || url;
+  sharetext = mixi.sharetext || '';
+  checkkey = mixi.checkkey || '';
+  linktext = mixi.linktext || 'mixi';
+  layout = mixi.layout || 'button-1';
+  count = mixi.count || 'true';
+
+  encoded_shareurl = encodeURIComponent(shareurl);
+
+%>
+<a href="http://mixi.jp/share.pl" class="mixi-check-button" data-key="<%= checkkey %>" data-url="<%= encoded_shareurl %>" data-button="<%= layout %>" data-text="<%= sharetext %>" data-show-count="<%= count %>">mixiチェック</a>
+<script type="text/javascript" src="http://static.mixi.jp/js/share.js"></script>
