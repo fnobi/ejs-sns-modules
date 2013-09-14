@@ -1,7 +1,9 @@
 <%
 
-  sns = sns || {};
-  sns.facebook = sns.facebook || {};
-  sns.facebook.shareurl = sns.facebook.shareurl || url;
+  sns       = sns || {};
+  facebook  = sns.facebook || {};
+  shareurl  = facebook.shareurl || url;
+  layout    = facebook.layout || 'button_count';
+  showfaces = facebook.showfaces || 'false';
 
-%><div class="fb-like" <% if (sns.facebook.shareurl) { %>data-href="<%= sns.facebook.shareurl %>" <% } %>data-send="false" data-layout="button_count" data-width="70" data-show-faces="false"></div>
+%><div class="fb-like" <% if (sns.facebook.shareurl) { %>data-href="<%= shareurl %>" <% } %>data-send="false" data-layout="<%= layout %>" data-width="70" data-show-faces="<%= showfaces %>"></div>
