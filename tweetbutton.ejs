@@ -5,8 +5,9 @@
   count        = twitter.count === false ? false : true
   shareurl     = twitter.shareurl || url;
   sharehashtag = twitter.sharehashtag || [];
+  lang         = twitter.lang || 'ja';
 
-%><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja"<% if (!count) { %> data-count="none"<% } %><% if (shareurl) { %> data-url="<%= shareurl %>"<% } %><% if (sharehashtag) { %> data-hashtag="<%= encodeURI(sharehashtag.join(',')) %>"<% } %>>ツイート</a>
+%><a href="https://twitter.com/share" class="twitter-share-button" data-lang="<%= lang %>"<% if (!count) { %> data-count="none"<% } %><% if (shareurl) { %> data-url="<%= shareurl %>"<% } %><% if (sharehashtag) { %> data-hashtag="<%= encodeURI(sharehashtag.join(',')) %>"<% } %>>ツイート</a>
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 </script>
