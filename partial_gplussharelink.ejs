@@ -1,0 +1,6 @@
+<% locals.partial_gplussharelink = function (buf, opts, block) { %><%
+  opts = opts || {};
+  block = block || function (buf) { %>gplus<% }
+%><a href="https://plus.google.com/share<% if (opts.url) {
+%>?url=<%= encodeURIComponent(opts.url) %><% }
+%>" target="_blank"><% block(buf) %></a><% } %>

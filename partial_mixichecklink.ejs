@@ -1,0 +1,7 @@
+<% locals.partial_mixichecklink = function (buf, opts, block) { %><%
+  opts = opts || {};
+  block = block || function (buf) { %>mixi<% };
+%><a href="http://mixi.jp/share.pl?<% if (opts.url) {
+%>u=<%= encodeURIComponent(opts.url) %>&amp;<% } if (opts.checkkey) {
+%>k=<%= opts.checkkey %>" <% }
+%>target="_blank"><% block(buf) %></a><% } %>

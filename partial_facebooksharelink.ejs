@@ -1,0 +1,6 @@
+<% locals.partial_facebooksharelink = function (buf, opts, block) { %><%
+  opts = opts || {};
+  block = block || function (buf) { %>share<% };
+%><a href="https://www.facebook.com/sharer/sharer.php<% if (opts.url) {
+%>?u=<%= encodeURIComponent(opts.url) %><% }
+%>" target="_blank"><% block(buf) %></a><% } %>

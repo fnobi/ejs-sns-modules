@@ -1,0 +1,10 @@
+<% locals.partial_tweetlink = function (buf, opts, block) { %><%
+  opts = opts || {};
+  block = block || function (buf) { %>twitter<% };
+%><a target="_blank" href="https://twitter.com/intent/tweet?<%
+%>tw_p=tweetbutton&amp;<% if (opts.url) {
+%>url=<%= encodeURIComponent(opts.url) %>&amp;<%
+%>original_referer=<%= encodeURIComponent(opts.url) %>&amp;<% } if (opts.text) {
+%>text=<%= opts.text %>&amp;<% } if (opts.hashtags && opts.hashtags.length) {
+%>hashtags=<%= opts.hashtags.join(',') %>&amp;<% }
+%>"><% block(buf) %></a>

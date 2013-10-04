@@ -1,9 +1,0 @@
-<%
-
-  sns      = sns || {};
-  gplus    = sns.gplus || {};
-  shareurl = gplus.shareurl || url;
-  linktext = gplus.linktext || 'google+';
-
-  encoded_shareurl = encodeURIComponent(shareurl);
-%><a href="https://plus.google.com/share?url=<%= shareurl %>" target="_blank"><%= linktext %></a>
