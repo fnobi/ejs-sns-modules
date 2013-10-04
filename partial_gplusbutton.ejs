@@ -1,11 +1,9 @@
-<%
-
-  sns       = sns || {};
-  gplus     = sns.gplus || {};
-  shareurl  = gplus.shareurl || url;
-  size      = gplus.size || 'medium';
-
-%><div class="g-plusone" data-size="<%= size %>" data-href="<%= shareurl %>"></div>
+<% locals.partial_gplusbutton = function (buf, opts) { %><%
+opts = opts || {}
+%><div class="g-plusone" <% if (opts.size) {
+%>data-size="<%= opts.size %>" <% } if (opts.url){
+%>data-href="<%= opts.url %>" <% } 
+%>></div>
 <script type="text/javascript">
   window.___gcfg = {lang: 'ja'};
 
@@ -14,4 +12,4 @@
     po.src = 'https://apis.google.com/js/plusone.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
-</script>
+</script><% } %>

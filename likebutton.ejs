@@ -1,9 +1,0 @@
-<%
-
-  sns       = sns || {};
-  facebook  = sns.facebook || {};
-  shareurl  = facebook.shareurl || url;
-  layout    = facebook.layout || 'button_count';
-  showfaces = facebook.showfaces || 'false';
-
-%><div class="fb-like" <% if (shareurl) { %>data-href="<%= shareurl %>" <% } %>data-send="false" data-layout="<%= layout %>" data-width="70" data-show-faces="<%= showfaces %>"></div>

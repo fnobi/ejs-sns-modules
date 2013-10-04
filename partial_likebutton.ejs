@@ -1,0 +1,6 @@
+<% locals.partial_likebutton (buf, opts) { %><% opts = opts || {} %><div class="fb-like" <% if (opts.url) {
+%>data-href="<%= opts.url %>" <% }
+%>data-send="<%= opts.send ? 'true' : 'false' %>" <%
+%>data-layout="<%= opts.layout || 'button_count' %>" <%
+%>data-width="70" <%
+%>data-show-faces="<%= opts.showfaces ? 'true' : 'false' %>"></div><% } %>

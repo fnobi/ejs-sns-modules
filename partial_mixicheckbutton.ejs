@@ -1,0 +1,11 @@
+<% locals.partial_mixicheckbutton (buf, opts) { %><% opts = opts || {} %>
+<a href="http://mixi.jp/share.pl" class="mixi-check-button"<% if (opts.checkkey) {
+%> data-key="<%= opts.checkkey %>"<%
+} %><% if (opts.url) {
+%> data-url="<%= encodeURIComponent(opts.url) %>"<%
+} %><% if (opts.text) {
+%> data-text="<%= opts.text %>"<%
+} %><% if (opts.count) {
+%> data-show-count="<%= opts.count ? 'true' : 'false' %>"<%
+} %> data-button="<%= opts.layout || 'button-1'%>">mixiチェック</a>
+<script type="text/javascript" src="http://static.mixi.jp/js/share.js"></script>
