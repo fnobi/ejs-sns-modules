@@ -1,6 +1,6 @@
 {
   "name": "ejs-sns-modules",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "ignore": [
     "**/.*",
     "node_modules",
